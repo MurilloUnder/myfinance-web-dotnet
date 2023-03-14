@@ -1,10 +1,10 @@
 @{
-    ViewData["Title"] = "Plano de Contas";
+    ViewData["Title"] = "Plano de Contas e Gastos Mensais";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<button type="button" class="btn btn-primary btn-lg" onclick="Novo()">Criar item de Plano de Conta</button>
+<button type="button" class="btn btn-primary btn-lg" onclick="Novo()">Criar novo item de Contas</button>
 
 <hr />
 
@@ -14,8 +14,8 @@
             <th scope="col">Id</th>
             <th scope="col">Descrição</th>
             <th scope="col">Tipo</th>
-            <th scope="col">#</th>
-            <th scope="col">#</th>
+            <th scope="col">Editar Plano</th>
+            <th scope="col">Excluir Plano</th>
         </tr>
     </thead>
     <tbody>
@@ -36,14 +36,14 @@
 
 <script>
     function Excluir(id) {
-        Window.location.href = "../PlanoConta/Excluir" + id
+        window.location.href = "../PlanoConta/Excluir/" + id
     }
 
     function Editar(id) {
-        window.location.href = "../PlanoConta/Cadastro" + id
+        window.location.href = "../PlanoConta/Cadastro/" + id
     }
 
     function Novo() {
-        window.location.href = "../PlanoConta/Cadastro"
+        window.location.href = "../PlanoConta/Cadastro/"
     }
 </script>

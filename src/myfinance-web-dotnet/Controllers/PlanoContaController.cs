@@ -35,7 +35,7 @@ namespace myfinance_web_dotnet.Controllers
 
         [HttpGet]
         [Route("Cadastro")]
-        [Route("Cadastro/(id)")]
+        [Route("Cadastro/{id}")]
         public IActionResult Cadastro(int? id)
         {
             if (id != null)
@@ -49,7 +49,7 @@ namespace myfinance_web_dotnet.Controllers
 
         [HttpPost]
         [Route("Cadastro")]
-        [Route("Cadastro/(id)")]
+        [Route("Cadastro/{id}")]
         public IActionResult Cadastro(PlanoContaModel model)
         {
             _planoContaService.Salvar(model);
@@ -57,12 +57,11 @@ namespace myfinance_web_dotnet.Controllers
         }
 
         [HttpGet]
-        [Route("Excluir/(id)")]
+        [Route("Excluir/{id}")]
         public IActionResult Excluir(int id)
         {
             _planoContaService.Excluir(id);
             return RedirectToAction("Index");
         }
-
     }
 }

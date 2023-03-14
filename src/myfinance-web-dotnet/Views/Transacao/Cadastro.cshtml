@@ -8,7 +8,6 @@
 
 <form asp-controller="Transacao" asp-action="Cadastro" method="post">
     <div class="container">
-
         <div class="mb-3">
             <label class="form-label">Data</label>
             <input type="hidden" id="txtId" class="form-control" asp-for="Id" />
@@ -22,7 +21,7 @@
 
         <div class="mb-3">
             <label class="form-label">Item Plano Conta</label>
-            @* @Html.DropDownListFor(m => m.PlanoContaId, Model.PlanoContas, new { @class="form-select"} ) *@
+            @Html.DropDownListFor(m => m.PlanoContaId, Model.PlanoContas, new { @class="form-select" })
         </div>
 
         <div class="mb-3">
@@ -40,6 +39,6 @@
 
 <script>
     function voltar() {
-        window.location.href = "../Transacao/Index"
+        window.location.href = "../Index"
     }
 </script>

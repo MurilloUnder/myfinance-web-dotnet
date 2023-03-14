@@ -8,6 +8,5 @@ namespace myfinance_web_dotnet.Domain.Entities
         public string? Historico { get; set; }
         public int PlanoContaId { get; set; }
         public PlanoConta PlanoConta { get; set; }
-
     }
 }
