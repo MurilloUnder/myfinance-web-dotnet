@@ -5,15 +5,11 @@
 }
 
 <div class="row justify-content-center">
-    <h1 class="display-4">My Finance Web</h1>
-    <p>Controle de Finanças Online</p>
-
+    <h1 class="display-4 fw-bold text-danger">Controle de Finanças e Gastos</h1>
+    
     <form asp-controller="Home" asp-action="Cadastro" method="post"> 
       <div class="container">
           <div class="col-md-3">
-               <label class="form-label">Novo</label>
-               <input type="text" id="txtNome" class="form-control" asp-for="Nome">
-               <button type="submit" class="btn btn-info">Enviar</button>
           </div>
       </div>
     </form>   

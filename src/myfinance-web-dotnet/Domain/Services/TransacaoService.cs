@@ -15,7 +15,7 @@ namespace myfinance_web_dotnet.Domain.Services
             _dbContext = dbContext;
         }
 
-        void ITransacaoService.Excluir(int id)
+        public void Excluir(int id)
         {
             var item = _dbContext.Transacao.Where(x => x.Id == id).First();
             _dbContext.Attach(item);
