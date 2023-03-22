@@ -6,14 +6,6 @@ Esse é um projeto para controle financeiro pessoa, utilizado para ajudar na med
 
 É fundamental para garantir a saúde financeira a curto e longo prazo e para alcançar objetivos financeiros, como economizar para uma casa ou uma aposentadoria confortável.
 
-Grupo 7 
-
-Carlos César
-Cleuton Correa
-Leonardo de Paula
-Murillo Oliveira
-Sillas Soares
-
 O objetivo deste projeto é possibilitar que os usuários registrem suas entradas e saídas financeiras e analisem seus gastos, a fim de que o usuário realize um planejamento financeiro mais eficaz. Essa aplicação permitirá que o usuário crie um Plano de Contas personalizado para categorizar todas as transações, e também fornecerá um relatório detalhado das transações realizadas durante um determinado período.
 
 Tecnologias
@@ -43,6 +35,33 @@ Tabela Plano Conta
 
 Tabela Transaçao
 <img src='docs/7.png'>
+
+<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+Codigo utilizando google.charts para o Gráfico de Receitas vs Despesas por Período: O usuário precisa de um relatório
+do tipo gráfico no formato pizza e que demonstre o total de receitas e despesas por
+período de datas.
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Transacao', 'Total'],
+            ['Receitas', @Receitas],
+            ['Despesas', @Despesas]
+
+        ]);
+
+        var options = {
+            title: 'My Daily Activities',
+            is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+    }
+</script>
 
 Controle de Finanças e Gastos
 <img src='docs/1.png'>
