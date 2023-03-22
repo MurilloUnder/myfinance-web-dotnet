@@ -34,6 +34,15 @@ planoconta - que irá contecer os itens do Plano de Contas do usuário;
 # SWE - Diagrama de Entidade e Relacionamento
 <img src='docs/DER.png'>
 
+# SWE - Diagrama de Entidade e Relacionamento
+<img src='docs/DER1.png'>
+
+Tabela Plano Conta
+<img src='docs/6.png'>
+
+Tabela Transaçao
+<img src='docs/7.png'>
+
 Inicial Controle de Finanças e Gastos
 <img src='docs/1.png'>
 
