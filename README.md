@@ -1,18 +1,11 @@
 # myfinance-web-dotnet
-MyFinance Web - Controle de Finanças
+MyFinance Web - Controle de Finanças e Gastos
 MyFinance - Projeto do Curso de Pós-Graduação em Engenharia da Computação PUC-MG.
 
 Esse é um projeto para controle financeiro pessoa, utilizado para ajudar na medição, rastreabilidade e controle financeiro dos usuários.
 
 É fundamental para garantir a saúde financeira a curto e longo prazo e para alcançar objetivos financeiros, como economizar para uma casa ou uma aposentadoria confortável.
 
-Grupo 7
-
-Carlos César
-Cleuton Correa
-Leonardo de Paula
-Murillo Oliveira
-Sillas Soares
 O objetivo deste projeto é possibilitar que os usuários registrem suas entradas e saídas financeiras e analisem seus gastos, a fim de que o usuário realize um planejamento financeiro mais eficaz. Essa aplicação permitirá que o usuário crie um Plano de Contas personalizado para categorizar todas as transações, e também fornecerá um relatório detalhado das transações realizadas durante um determinado período.
 
 Tecnologias
@@ -29,7 +22,7 @@ Diagrama Entidade-Relacionamento - DER
 O Banco de Dados da aplicação possuí duas tabelas:
 
 transacao - que irá conter os dados das transações financeiras do usuário;
-planoconta - que irá contecer os itens do Plano de Contas do usuário;
+planoconta - que irá conter os itens do Plano de Contas do usuário;
 
 # SWE - Diagrama de Entidade e Relacionamento
 <img src='docs/DER.png'>
@@ -37,13 +30,16 @@ planoconta - que irá contecer os itens do Plano de Contas do usuário;
 # SWE - Diagrama de Entidade e Relacionamento
 <img src='docs/DER1.png'>
 
+CREATE DATABASE myfinance
+<img src='docs/8.png'>
+
 Tabela Plano Conta
 <img src='docs/6.png'>
 
 Tabela Transaçao
 <img src='docs/7.png'>
 
-Inicial Controle de Finanças e Gastos
+Controle de Finanças e Gastos
 <img src='docs/1.png'>
 
 Cadastro de Plano de Contas
@@ -54,6 +50,32 @@ Plano de contas e Gastos Mensais
 
 Transações Financeiras Mensais
 <img src='docs/4.png'>
+
+Codigo utilizando google.charts para o Gráfico de Receitas vs Despesas por Período: O usuário precisa de um relatório
+do tipo gráfico no formato pizza e que demonstre o total de receitas e despesas por período de datas.
+
+<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Transacao', 'Total'],
+            ['Receitas', @Receitas],
+            ['Despesas', @Despesas]
+
+        ]);
+
+        var options = {
+            title: 'My Daily Activities',
+            is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+    }
+</script>
 
 Registro de Transação
 <img src='docs/5.png'>
