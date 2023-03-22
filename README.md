@@ -36,11 +36,22 @@ Tabela Plano Conta
 Tabela Transaçao
 <img src='docs/7.png'>
 
-<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+Controle de Finanças e Gastos
+<img src='docs/1.png'>
+
+Cadastro de Plano de Contas
+<img src='docs/2.png'>
+
+Plano de contas e Gastos Mensais 
+<img src='docs/3.png'>
+
+Transações Financeiras Mensais
+<img src='docs/4.png'>
 
 Codigo utilizando google.charts para o Gráfico de Receitas vs Despesas por Período: O usuário precisa de um relatório
-do tipo gráfico no formato pizza e que demonstre o total de receitas e despesas por
-período de datas.
+do tipo gráfico no formato pizza e que demonstre o total de receitas e despesas por período de datas.
+
+<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
     google.charts.load("current", { packages: ["corechart"] });
@@ -62,18 +73,6 @@ período de datas.
         chart.draw(data, options);
     }
 </script>
-
-Controle de Finanças e Gastos
-<img src='docs/1.png'>
-
-Cadastro de Plano de Contas
-<img src='docs/2.png'>
-
-Plano de contas e Gastos Mensais 
-<img src='docs/3.png'>
-
-Transações Financeiras Mensais
-<img src='docs/4.png'>
 
 Registro de Transação
 <img src='docs/5.png'>
