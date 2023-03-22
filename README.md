@@ -25,13 +25,14 @@ transacao - que irá conter os dados das transações financeiras do usuário;
 planoconta - que irá conter os itens do Plano de Contas do usuário;
 
 # SWE - Diagrama de Entidade e Relacionamento
+CREATE DATABASE myfinance
+<img src='docs/8.png'>
+
+# SWE - Diagrama de Entidade e Relacionamento
 <img src='docs/DER.png'>
 
 # SWE - Diagrama de Entidade e Relacionamento
 <img src='docs/DER1.png'>
-
-CREATE DATABASE myfinance
-<img src='docs/8.png'>
 
 Tabela Plano Conta
 <img src='docs/6.png'>
